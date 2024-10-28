@@ -15,15 +15,15 @@ app = Flask(__name__)
 
 # Setup Azure Key Vault client
 credential = DefaultAzureCredential()
-key_vault_url = "https://dhamecha.vault.azure.net/"
+key_vault_url = "https://domain.vault.azure.net/"
 secret_client = SecretClient(vault_url=key_vault_url, credential=credential)
 
 # # Fetch secrets from Key Vault
 # bi_db_connection_string = secret_client.get_secret("BI-DB-CONNECTION-STRING").value
 # user_authentication_key = secret_client.get_secret("USER-AUTHENTICATION-KEY").value
 
-bi_db_connection_string = "mssql+pyodbc://biadmin:bO-H33$+7hUCRUm&52?Z@bi-db-india-region.database.windows.net:1433/bi-db-india-region?driver=ODBC+Driver+17+for+SQL+Server"
-user_authentication_key = "0e5b126abca995a8cad1cbf14b307e5ef88272be"
+bi_db_connection_string = "mssql+pyodbc://USER:PASSWORD@DB-SERVER/DB?driver=ODBC+Driver+17+for+SQL+Server"
+user_authentication_key = "<JWT TOKEN KEY>"
 
 # Set JWT Authentication key
 jwt_secrets = user_authentication_key

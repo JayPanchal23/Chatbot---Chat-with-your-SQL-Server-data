@@ -19,7 +19,7 @@ from langchain_community.callbacks import get_openai_callback
 
 # Set up Azure Key Vault client
 credential = DefaultAzureCredential()
-key_vault_url = "https://dhamecha.vault.azure.net/"
+key_vault_url = "https://domain.vault.azure.net/"
 secret_client = SecretClient(vault_url=key_vault_url, credential=credential)
 
 # # Fetch secrets from Key Vault
@@ -27,9 +27,9 @@ secret_client = SecretClient(vault_url=key_vault_url, credential=credential)
 # db_connection_string = secret_client.get_secret("DB-CONNECTION-STRING").value
 # logger_token = secret_client.get_secret("LOGGER-TOKEN").value
 
-openai_api_key = "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"
-db_connection_string = "mssql+pyodbc://chatbotLogin:bO-H33$+7hUCRUm&52?Zchatbot@bi-db-india-region.database.windows.net:1433/bi-db-india-region?driver=ODBC+Driver+17+for+SQL+Server"
-logger_token = "oz8tYzBBDPzwhWJ23VFBgR1a"
+openai_api_key = "<OPENAI-KEY>"
+db_connection_string = "mssql+pyodbc://USER:PASSWORD@SERVER/DB?driver=ODBC+Driver+17+for+SQL+Server"
+logger_token = "LOGGER_TOKEN"
 
 
 # Set OpenAI API key in environment variable

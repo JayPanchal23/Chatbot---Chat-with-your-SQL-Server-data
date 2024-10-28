@@ -1,7 +1,7 @@
 import os
 import tkinter as tk
 import tkinter.ttk as ttk
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = <OPENAI-KEY>
 from ChatBot_PoC import agent, prompt
 import getpass
 
